@@ -10,7 +10,11 @@ window.onload = function() {
 
 //  Variable that will hold our setInterval that runs the stopwatch
 var intervalId;
+
+// var will hold the result count
 var correctAnswer = 0;
+
+//arry/objects will hold questions and options
 var question_1 = [{
     question: "1. How are you?",
     option_1: "not good",
@@ -38,25 +42,31 @@ var question_1 = [{
     option_3: "Clinton"
 }];
 
+// hide radio button
 $(".radio-inline").hide();
+
+//stopwatch function with start time set to 00
 var stopwatch = {
 
-    time: 10,
+    time: 00,
 
     reset: function() {
 
-        stopwatch.time = 10;
+        stopwatch.time = 00;
 
         //  TODO: Change the "display" div to "00:00."
-        $("#display").html("00:10");
+        $("#display").html("00:00");
 
     },
-
+    //When user click start button - increment time with 1 sec
+    //display questions ane options
     start: function() {
 
 
         intervalId = setInterval(stopwatch.count, 1000);
         console.log("count: " + stopwatch.time);
+
+        $("#start").prop("disabled", false);
         $(".radio-inline").show();
 
         $("#ques-1").html(question_1[0].question);
@@ -103,21 +113,23 @@ var stopwatch = {
 
 
     },
-
+    //create function to reset after finish the test
     stop: function() {
         clearInterval(intervalId);
+        $("#start").prop("disabled", true);
 
     },
 
     count: function() {
 
         //  TODO: increment time by 1, remember we cant use "this" here.
-        stopwatch.time--;
+        stopwatch.time++;
         console.log(stopwatch.time)
-        if (stopwatch.time === 00) {
+        if (stopwatch.time === 20) {
 
             alert("You answered " + correctAnswer + " Out of 5 questions!");
             stopwatch.stop();
+
         }
 
         //  TODO: Get the current time, pass that into the stopwatch.timeConverter function,
@@ -149,7 +161,7 @@ var stopwatch = {
       }
     };   //stopwatch end
 
-
+//validate answers and increament correct answer count
 $("#form_1").change(function() {
     var userAnswer = $('input[type=radio][name=option]:checked').val();
 
@@ -202,22 +214,3 @@ $("#form_5").change(function() {
 
 
 
-//   $('#form_1 input').change(function() {
-// 	var userAnswer = $('input[name=option]:checked', 'form_1').val();
-// 	console.log(userAnswer);
-// });
-
-
-//
-
-
-
-
-//after 30 second, alert popup display with final result.
-//with start button click
-//stop watch start
-//5 questions are displaying with options
-//user select one answer
-//if answer is correct add to correct answer
-
-//when answer all 5 questions - alert message should display.
