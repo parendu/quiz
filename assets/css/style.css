@@ -1,0 +1,38 @@
+
+body { /* Visual */
+  background: black;
+}
+
+#display {
+  font-family: monospace;
+  font-size: 60px;
+  color: green;
+
+  /* Typography */
+  text-align: center;
+
+  /* Visual */
+  background: black;
+}
+
+#wrapper {
+  /* Box-model */
+  width: 200px;
+
+  /* Positioning */
+  margin: 50px auto 0;
+}
+
+
+#button {
+  width: 100px;
+ margin: 50px auto 0;
+    
+  
+  /* Box-model */
+  height: 50px;
+}
+
+h2 {
+  text-align: center;
+}
