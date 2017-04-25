@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>QUIZZZ</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+</head>
+<header>QUIZ</header>
+
+<body>
+    <div class="jumbotron">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                </div>
+                <div class="col-sm-4">
+                    <h2>Please give your answer in 30 seconds!</h2>
+                    <div id="wrapper">
+                        <div id="display">00:00</div>
+                    </div>
+                    <br>
+                    <button type="button" class="btn btn-default btn-lg" id="start" style="">
+                        <span class="glyphicon glyphicon-hourglass" aria-hidden="true"></span> Start
+                    </button>
+                    <!-- <button type="button" class="btn btn-default btn-lg" id="stop" style="text-align: center">
+                        <span class="glyphicon glyphicon-hourglass" aria-hidden="true"></span> Stop
+                    </button> -->
+                    <hr>
+                </div>
+                <div class="col-sm-4">
+                </div>
+            </div>
+            <!-- </div> -->
+             <div class="row" id="question-1">
+                <div class="col-sm-12">
+                    <form id="form_1">
+                        <p class="ques-1" id="ques-1"></p><span id="ques-1" </span>
+                        <label class="radio-inline">
+                            <input id="opt-1" name="option" type="radio" value="opt_1">
+                            <span id="opt_1" </span>
+                        </label>
+                        <label class="radio-inline">
+                            <input id="opt-2" name="option" type="radio" value="opt_2">
+                            <span id="opt_2" </span>
+                        </label>
+                        <label class="radio-inline">
+                            <input id="opt-3" name="option" type="radio" value="opt_3">
+                            <span id="opt_3" </span>
+                        </label>
+                    </form>
+                </div>
+            </div>
+            <hr style="color: black">
+            <div class="row" id="question-2">
+                <div class="col-sm-12">
+                    <form id="form_2">
+                        <p class="ques-2" id="ques-2"></p><span id="ques-2" </span>
+                        <label class="radio-inline">
+                            <input id="opt-21" name="option" type="radio" value="opt_1">
+                            <span id="opt_21" </span>
+                        </label>
+                        <label class="radio-inline">
+                            <input id="opt-22" name="option" type="radio" value="opt_2">
+                            <span id="opt_22" </span>
+                        </label>
+                        <label class="radio-inline">
+                            <input id="opt-23" name="option" type="radio" value="opt_3">
+                            <span id="opt_23" </span>
+                        </label>
+                    </form>
+                </div>
+            </div>
+            <hr style="color: black">
+            <div class="row" id="question-2">
+                <div class="col-sm-12">
+                    <form id="form_3">
+                        <p class="ques-3" id="ques-3"></p><span id="ques-3" </span>
+                        <label class="radio-inline">
+                            <input id="opt-31" name="option" type="radio" value="opt_1">
+                            <span id="opt_31" </span>
+                        </label>
+                        <label class="radio-inline">
+                            <input id="opt-32" name="option" type="radio" value="opt_2">
+                            <span id="opt_32" </span>
+                        </label>
+                        <label class="radio-inline">
+                            <input id="opt-33" name="option" type="radio" value="opt_3">
+                            <span id="opt_33" </span>
+                        </label>
+                    </form>
+                </div>
+            </div>
+            <hr style="color: black">
+            <div class="row" id="question-2">
+                <div class="col-sm-12">
+                    <form id="form_4">
+                        <p class="ques-4" id="ques-4"></p><span id="ques-4" </span>
+                        <label class="radio-inline">
+                            <input id="opt-41" name="option" type="radio" value="opt_1">
+                            <span id="opt_41" </span>
+                        </label>
+                        <label class="radio-inline">
+                            <input id="opt-42" name="option" type="radio" value="opt_2">
+                            <span id="opt_42" </span>
+                        </label>
+                        <label class="radio-inline">
+                            <input id="opt-43" name="option" type="radio" value="opt_3">
+                            <span id="opt_43" </span>
+                        </label>
+                    </form>
+                </div>
+            </div>
+            <hr style="color: black">
+            <div class="row" id="question-2">
+                <div class="col-sm-12">
+                    <form id="form_5">
+                        <p class="ques-5" id="ques-5"></p><span id="ques-5" </span>
+                        <label class="radio-inline">
+                            <input id="opt-51" name="option" type="radio" value="opt_1">
+                            <span id="opt_51" </span>
+                        </label>
+                        <label class="radio-inline">
+                            <input id="opt-52" name="option" type="radio" value="opt_2">
+                            <span id="opt_52" </span>
+                        </label>
+                        <label class="radio-inline">
+                            <input id="opt-53" name="option" type="radio" value="opt_3">
+                            <span id="opt_53" </span>
+                        </label>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script src="./assets/javascript/quiz.js"></script>
+</body>
+
+</html>
