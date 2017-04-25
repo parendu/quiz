@@ -127,7 +127,7 @@ var stopwatch = {
         console.log(stopwatch.time)
         if (stopwatch.time === 20) {
 
-            alert("You answered " + correctAnswer + " Out of 5 questions!");
+            alert("Congratulation!! You correctly answered " + correctAnswer + " out of 5 questions!");
             stopwatch.stop();
 
         }
