@@ -65,8 +65,13 @@ var stopwatch = {
 
         intervalId = setInterval(stopwatch.count, 1000);
         console.log("count: " + stopwatch.time);
+        
+        //$("#start").on("click", function(){
+            $("#start").prop("disabled", true);
 
-        $("#start").prop("disabled", false);
+       // });
+       // $("#start").prop("disabled", false);
+
         $(".radio-inline").show();
 
         $("#ques-1").html(question_1[0].question);
@@ -109,14 +114,14 @@ var stopwatch = {
         $("#opt_52").html(question_1[4].option_2);
         console.log(question_1[4].option_2);
         $("#opt_53").html(question_1[4].option_3);
-        console.log(question_1[4].option_3);
+         console.log(question_1[4].option_3);
 
 
     },
     //create function to reset after finish the test
     stop: function() {
         clearInterval(intervalId);
-        $("#start").prop("disabled", true);
+        
 
     },
 
@@ -170,7 +175,7 @@ $("#form_1").change(function() {
         correctAnswer++
         console.log("correct: " + correctAnswer);
     }
-
+    userAnswer="";
 });
 
 $("#form_2").change(function() {
@@ -181,6 +186,7 @@ $("#form_2").change(function() {
         correctAnswer++
         console.log("correct: " + correctAnswer);
     }
+    userAnswer="";
 });
 
 $("#form_3").change(function() {
@@ -191,6 +197,7 @@ $("#form_3").change(function() {
         correctAnswer++
         console.log("correct: " + correctAnswer);
     }
+    userAnswer="";
 });
 $("#form_4").change(function() {
     var userAnswer = $('input[type=radio][name=option]:checked').val();
@@ -200,6 +207,7 @@ $("#form_4").change(function() {
         correctAnswer++
         console.log("correct: " + correctAnswer);
     }
+    userAnswer="";
 });
 $("#form_5").change(function() {
     var userAnswer = $('input[type=radio][name=option]:checked').val();
@@ -209,6 +217,7 @@ $("#form_5").change(function() {
         correctAnswer++
         console.log("correct: " + correctAnswer);
     }
+    userAnswer="";
 });
 
 
